@@ -13,26 +13,28 @@ export class ContactListComponent implements OnInit {
 
   @Output() ContactSelected: EventEmitter<Contact>;
 
-  private currentContact: Contact;
+  private _contactService: ContactService;
+  private _currentContact: Contact;
 
   constructor(private contactService: ContactService) {
-    this.ContactList = contactService.getAllContacts();
+    this._contactService = contactService;
     this.ContactSelected = new EventEmitter();
    }
 
   ngOnInit() {
+    this.ContactList = this._contactService.getAllContacts();
   }
 
   clicked(contact: Contact): void {
-    this.currentContact = contact;
+    this._currentContact = contact;
     this.ContactSelected.emit(contact);
   }
 
   isSelected(contact: Contact): boolean {
-    if (!contact || !this.currentContact) {
+    if (!contact || !this._currentContact) {
       return false;
     }
-    return contact.id === this.currentContact.id;
+    return contact.id === this._currentContact.id;
   }
 
 }

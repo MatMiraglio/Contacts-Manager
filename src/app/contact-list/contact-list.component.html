@@ -1,10 +1,9 @@
 <div>
     <app-contact-item
-      *ngFor="let contact of contactList"
+      *ngFor="let contact of ContactList"
       [contact]="contact"
       (click)='clicked(contact)'
       [class.selected]="isSelected(
         contact)">
     </app-contact-item>
   </div>
-  
