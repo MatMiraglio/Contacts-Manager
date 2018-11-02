@@ -8,17 +8,34 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactItemComponent } from './contact-item/contact-item.component';
 import { ContactProfilePicComponent } from './contact-profile-pic/contact-profile-pic.component';
 
+/*Angular Material*/
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ContactListComponent,
     ContactItemComponent,
-    ContactProfilePicComponent
+    ContactProfilePicComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
