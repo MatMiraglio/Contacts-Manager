@@ -16,7 +16,7 @@ export class ContactListComponent implements OnInit {
   private currentContact: Contact;
 
   constructor(private contactService: ContactService) {
-    this.ContactList = contactService.allContacts;
+    this.ContactList = contactService.getAllContacts();
     this.ContactSelected = new EventEmitter();
    }
 

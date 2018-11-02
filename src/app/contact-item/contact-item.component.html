@@ -1,8 +1,6 @@
-<contact-profile-pic  [pictureUrl]="Contact.profilePicUrl"></contact-profile-pic>
+
+<app-contact-profile-pic  [pictureUrl]="contact.profilePicUrl"></app-contact-profile-pic>
 <div class="content">
-  <div class="header">{{ Contact.name }}</div>
-  <div class="description">
-    <product-department [product]="product"></product-department>
-  </div>
+  <h1>{{ contact.name }}</h1>
+  <p>{{ contact.Company }}</p>
 </div>
-<price-display [price]="product.price"></price-display>
