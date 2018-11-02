@@ -1,0 +1,15 @@
+<ul>  
+  <li *ngFor="let contact of contacts">
+    <contact-item [name]="contact.name"> </contact-item>
+  </li>
+</ul>
+
+<div class="ui items">
+    <contact-item
+      *ngFor="let contact of contactList"
+      [contact]="contact"
+      (click)='clicked(contact)'
+      [class.selected]="isSelected(
+        contact)">
+    </contact-item>
+  </div>
