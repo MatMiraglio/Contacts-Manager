@@ -1,27 +1,26 @@
 <div id="ContactForm">
-<form [formGroup]="ContactForm">
-    <hr>
-      <mat-form-field>
-          <input matInput placeholder="name" formControlName="name" autocomplete="off">
-      </mat-form-field>
+    <h1>New Contact</h1>  
+    <form [formGroup]="ContactForm">
+        <hr>
+        <mat-form-field>
+            <input matInput placeholder="name" formControlName="name" autocomplete="off">
+        </mat-form-field>
 
-      <mat-form-field>
-          <input matInput placeholder="phone" [value]="0" formControlName="phone">
-      </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="phone" [value]="" formControlName="phone">
+        </mat-form-field>
 
-      <mat-form-field>
-          <input matInput placeholder="email" [value]="0" formControlName="email">
-      </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="email" [value]="" formControlName="email">
+        </mat-form-field>
 
-      <mat-form-field>
-          <input matInput placeholder="company" [value]="0" formControlName="company">
-      </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="company" [value]="" formControlName="company">
+        </mat-form-field>
 
-      <mat-checkbox formControlName="finished" color="primary">Finished?</mat-checkbox>
-    <hr>
+        <mat-checkbox formControlName="finished" color="primary">Finished?</mat-checkbox>
+        <hr>
 
-    <button mat-raised-button [disabled]="ContactForm.invalid || loading" color="primary">Let's Do it!</button>
-
-</form>
-
+        <button mat-raised-button [disabled]="ContactForm.invalid || loading" color="primary">Let's Do it!</button>
+    </form>
 </div>

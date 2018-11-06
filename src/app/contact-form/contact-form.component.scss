@@ -1,8 +1,11 @@
 #ContactForm{
-  max-width: 40%;
+  max-width: 33%;
   align-content: center;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 15px;
+  h1 {
+      margin-bottom: 15px;
+  }
 }
 
 mat-form-field {

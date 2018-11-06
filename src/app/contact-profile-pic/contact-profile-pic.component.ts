@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Contact } from '../Contact.model';
 
 @Component({
   selector: 'app-contact-profile-pic',
@@ -15,6 +14,8 @@ export class ContactProfilePicComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if (!this.pictureUrl) {
+      this.pictureUrl = 'https://ursa.research.gsu.edu/files/2016/08/people-placeholder.jpg';
+    }
   }
-
 }

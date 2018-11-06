@@ -13,11 +13,9 @@ export class ContactListComponent implements OnInit {
 
   @Output() ContactSelected: EventEmitter<Contact>;
 
-  private _contactService: ContactService;
   private _currentContact: Contact;
 
-  constructor(private contactService: ContactService) {
-    this._contactService = contactService;
+  constructor(private _contactService: ContactService) {
     this.ContactSelected = new EventEmitter();
    }
 

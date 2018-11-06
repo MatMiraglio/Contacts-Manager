@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { Contact } from '../Contact.model';
+import {MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-contact-item',

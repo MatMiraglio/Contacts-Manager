@@ -2,12 +2,15 @@
  * Provides a `Contact` object
  */
 export class Contact {
-    constructor(
-      public id: string,
-      public name: string,
-      public phoneNumber: string,
-      public profilePicUrl: string,
-      public company: string,
-      public email: string) {
-    }
-  }
+  constructor(
+    public id: number,
+    public name: string,
+    public company: string,
+    public profilePicUrl: string,
+    public email: string,
+    public birthDay: string,
+    public phoneNumberWork: string,
+    public phoneNumberHome: string,
+    public address: string
+    ) {}
+}
