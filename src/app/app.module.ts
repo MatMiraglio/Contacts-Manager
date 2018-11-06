@@ -14,6 +14,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -35,7 +37,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     MatButtonModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatChipsModule
+    MatChipsModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

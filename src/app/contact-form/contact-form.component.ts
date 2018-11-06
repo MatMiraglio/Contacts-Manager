@@ -10,10 +10,12 @@ export class ContactFormComponent implements OnInit {
 
   ContactForm: FormGroup;
 
+  loading = false;
+  success = false;
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-
     this.ContactForm = this.formBuilder.group({
       name: ['', [
         Validators.required,
@@ -33,6 +35,8 @@ export class ContactFormComponent implements OnInit {
         Validators.requiredTrue
       ]],
     });
+
+    this.ContactForm.valueChanges.subscribe(console.log);
   }
 
 }

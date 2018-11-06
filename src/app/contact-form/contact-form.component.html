@@ -1,49 +1,27 @@
+<div id="ContactForm">
 <form [formGroup]="ContactForm">
-
-    Value: {{ ContactForm.value | json }}
-    <ul>
-        <li>Valid:
-            <mat-chip selected="true" [color]="ContactForm.valid ? 'accent' : 'warn'">{{ ContactForm.valid }}</mat-chip>
-        </li>
-        <li>Invalid:
-            <mat-chip selected="true" [color]="ContactForm.invalid ? 'accent' : 'warn'">{{ ContactForm.invalid }}</mat-chip>
-        </li>
-        <li>Dirty:
-            <mat-chip selected="true" [color]="ContactForm.dirty ? 'accent' : 'warn'">{{ ContactForm.dirty }}</mat-chip>
-        </li>
-        <li>Pristine:
-            <mat-chip selected="true" [color]="ContactForm.pristine ? 'accent' : 'warn'">{{ ContactForm.pristine }}</mat-chip>
-        </li>
-        <li>Touched:
-            <mat-chip selected="true" [color]="ContactForm.touched ? 'accent' : 'warn'">{{ ContactForm.touched }}</mat-chip>
-        </li>
-        <li>Untouched:
-            <mat-chip selected="true" [color]="ContactForm.untouched ? 'accent' : 'warn'">{{ ContactForm.untouched }}</mat-chip>
-        </li>
-        <li>Pending:
-            <mat-chip selected="true" [color]="ContactForm.pending ? 'accent' : 'warn'">{{ ContactForm.pending }}</mat-chip>
-        </li>
-    </ul>
-
     <hr>
+      <mat-form-field>
+          <input matInput placeholder="name" formControlName="name" autocomplete="off">
+      </mat-form-field>
 
-    <mat-form-field>
-        <input matInput placeholder="name" formControlName="name" autocomplete="off">
-    </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="phone" [value]="0" formControlName="phone">
+      </mat-form-field>
 
-    <mat-form-field>
-        <input matInput placeholder="phone" [value]="0" formControlName="phone">
-    </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="email" [value]="0" formControlName="email">
+      </mat-form-field>
 
+      <mat-form-field>
+          <input matInput placeholder="company" [value]="0" formControlName="company">
+      </mat-form-field>
 
-
-    <mat-checkbox formControlName="finished" color="primary">Finished?</mat-checkbox>
-
+      <mat-checkbox formControlName="finished" color="primary">Finished?</mat-checkbox>
     <hr>
 
     <button mat-raised-button [disabled]="ContactForm.invalid || loading" color="primary">Let's Do it!</button>
 
-
-
-
 </form>
+
+</div>

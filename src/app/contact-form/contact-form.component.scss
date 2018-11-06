@@ -1,0 +1,14 @@
+#ContactForm{
+  max-width: 40%;
+  align-content: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+mat-form-field {
+    display: block;
+}
+
+textarea {
+    min-height: 130px;
+}
