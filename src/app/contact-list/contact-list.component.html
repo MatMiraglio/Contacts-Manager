@@ -5,17 +5,19 @@
           <th></th>
           <th>Name</th>
           <th>Company</th>
-          <th>Email</th>
+          <th></th>
           <th></th>
           <th></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor='let contact of ContactList'>
-          <td><app-contact-profile-pic [pictureUrl]="contact.profilePicUrl" ></app-contact-profile-pic></td>
+          <td><app-contact-profile-pic [pictureUrl]="contact.profilePicUrl"></app-contact-profile-pic></td>
           <td>{{ contact.name }}</td>
           <td>{{ contact.company }}</td>
-          <td>{{ contact.email }}</td>
+          <td>
+              <a mat-raised-button [routerLink]="['/contacts', 'edit', contact.id]">info</a>
+          </td>
           <td>
               <a mat-raised-button color="primary" [routerLink]="['/contacts', 'edit', contact.id]">EDIT</a>
           </td>
