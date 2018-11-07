@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactListComponent } from './contact-list/contact-list.component';
-import { ContactProfilePicComponent } from './contact-profile-pic/contact-profile-pic.component';
 
 /*Angular Material*/
 import { MatInputModule } from '@angular/material/input';
@@ -27,7 +26,6 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
   declarations: [
     AppComponent,
     ContactListComponent,
-    ContactProfilePicComponent,
     ContactFormComponent,
     ContactDetailsComponent
   ],

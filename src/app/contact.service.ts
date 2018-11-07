@@ -8,9 +8,10 @@ export class ContactService {
 
   constructor() {
     this.allContacts = [
-      new Contact(1, 'John', 'Solstice', 'https://via.placeholder.com/150/b0f7cc', 'solstice@gmail.com', '', '123123123', '', ''),
-      new Contact(2, 'Bob', 'Microsoft', 'https://via.placeholder.com/150/b0f7cc', 'solstice@gmail.com', '', '', '', ''),
-      new Contact(3, 'Mark', 'Google', 'https://via.placeholder.com/150/b0f7cc', 'solstice@gmail.com', '', '', '', '')
+      new Contact(1, 'John', 'Solstice', 'https://via.placeholder.com/150/b0f7cc',
+       'solstice@gmail.com', '20/12/1990', '123123123', '12315616514', 'Arenales 1890'),
+      new Contact(2, 'Bob', 'Microsoft', 'https://via.placeholder.com/150/b0f7cc', 'solstice@gmail.com', '20/12/1990', '', '', ''),
+      new Contact(3, 'Mark', 'Google', 'https://via.placeholder.com/150/b0f7cc', 'solstice@gmail.com', '20/12/1990', '', '', '')
     ];
    }
 
@@ -21,6 +22,7 @@ export class ContactService {
   }
 
   getContactById(id: number): Contact {
-    return this.allContacts.find(p => p.id === id);
+    // tslint:disable-next-line:triple-equals
+    return this.allContacts.find(p => p.id == id);
   }
 }

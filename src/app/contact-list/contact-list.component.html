@@ -10,9 +10,9 @@
     </thead>
     <tbody>
       <tr *ngFor='let contact of ContactList'>
-          <td><app-contact-profile-pic [pictureUrl]="contact.profilePicUrl"></app-contact-profile-pic></td>
-          <td>{{ contact.name }}</td>
-          <td>{{ contact.company }}</td>
+          <td> <img class="product-image" *ngIf="contact.profilePicUrl" [src]="contact.profilePicUrl"> </td>
+          <td> {{ contact.name }} </td>
+          <td> {{ contact.company }} </td>
           <td>
               <a mat-raised-button [routerLink]="['/Contact', contact.id]" >INFO</a>
               <a mat-raised-button color="warn" [routerLink]="['/contacts', 'delete', contact.id]">DELETE</a>
