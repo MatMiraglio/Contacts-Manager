@@ -1,5 +1,5 @@
-<div class="container mat-elevation-z8" id="ContactDetails">
-    <div class="row">
+<div class="container" >
+    <div class="row mat-elevation-z8" id="ContactDetails">
         <div class="col"> 
             <img class="product-image" *ngIf="contact.profilePicUrl" [src]="contact.profilePicUrl">
             <h1> {{ contact.name }} </h1>
@@ -14,6 +14,14 @@
             
             <p> {{ contact.phoneNumberHome }} </p>
             <p> {{ contact.address }} </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9"></div>
+        <div class="col-3">
+                <a mat-raised-button [routerLink]="['']" >BACK</a>
+                <a mat-raised-button color="warn" [routerLink]="['/contacts', 'delete', contact.id]">DELETE</a>
+                <a mat-raised-button color="primary" [routerLink]="['/contacts', 'edit', contact.id]">EDIT</a>
         </div>
     </div>
 </div>
