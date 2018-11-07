@@ -8,7 +8,7 @@ export class ContactService {
 
   constructor() {
     this.allContacts = [
-      new Contact(1, 'john', 'Solstice', 'https://via.placeholder.com/150/b0f7cc', 'solstice@gmail.com', '', '123123123', '', ''),
+      new Contact(1, 'John', 'Solstice', 'https://via.placeholder.com/150/b0f7cc', 'solstice@gmail.com', '', '123123123', '', ''),
       new Contact(2, 'Bob', 'Microsoft', 'https://via.placeholder.com/150/b0f7cc', 'solstice@gmail.com', '', '', '', ''),
       new Contact(3, 'Mark', 'Google', 'https://via.placeholder.com/150/b0f7cc', 'solstice@gmail.com', '', '', '', '')
     ];

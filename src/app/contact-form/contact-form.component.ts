@@ -20,17 +20,17 @@ export class ContactFormComponent implements OnInit {
       name: ['', [
         Validators.required,
       ]],
-      phone: ['', [
-        Validators.required
+      company: ['', [
+        Validators.required,
       ]],
       email: ['', [
         Validators.required,
-        Validators.email
       ]],
-      company: ['', [
-        Validators.required,
-        Validators.maxLength(30)
-      ]],
+      phoneWork: [''],
+      phoneHome: [''],
+      birthday: [''],
+      address: [''],
+
       finished: [false, [
         Validators.requiredTrue
       ]],

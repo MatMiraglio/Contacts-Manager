@@ -8,7 +8,7 @@ export class Contact {
     public company: string,
     public profilePicUrl: string,
     public email: string,
-    public birthDay: string,
+    public birthday: string,
     public phoneNumberWork: string,
     public phoneNumberHome: string,
     public address: string

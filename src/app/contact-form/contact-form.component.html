@@ -1,13 +1,13 @@
 <div id="ContactForm">
     <h1>New Contact</h1>  
     <form [formGroup]="ContactForm">
-        <hr>
+        
         <mat-form-field>
-            <input matInput placeholder="name" formControlName="name" autocomplete="off">
+            <input matInput placeholder="name" [value]="" formControlName="name" autocomplete="off">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="phone" [value]="" formControlName="phone">
+                <input matInput placeholder="company" [value]="" formControlName="company">
         </mat-form-field>
 
         <mat-form-field>
@@ -15,12 +15,28 @@
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="company" [value]="" formControlName="company">
+                <input matInput placeholder="phone work" [value]="" formControlName="phoneWork">
         </mat-form-field>
+
+        <mat-form-field>
+                <input matInput placeholder="phone home" [value]="" formControlName="phoneHome">
+        </mat-form-field>
+
+        <mat-form-field>
+                <input matInput [matDatepicker]="picker" formControlName="birthday" placeholder="Choose a date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+                <input matInput placeholder="address" [value]="" formControlName="address">
+        </mat-form-field>
+
+        
 
         <mat-checkbox formControlName="finished" color="primary">Finished?</mat-checkbox>
         <hr>
 
-        <button mat-raised-button [disabled]="ContactForm.invalid || loading" color="primary">Let's Do it!</button>
+        <button mat-raised-button [disabled]="ContactForm.invalid || loading" color="primary">Add new contact</button>
     </form>
 </div>

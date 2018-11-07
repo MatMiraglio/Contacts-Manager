@@ -6,8 +6,6 @@
           <th>Name</th>
           <th>Company</th>
           <th></th>
-          <th></th>
-          <th></th>
       </tr>
     </thead>
     <tbody>
@@ -16,13 +14,9 @@
           <td>{{ contact.name }}</td>
           <td>{{ contact.company }}</td>
           <td>
-              <a mat-raised-button [routerLink]="['/contacts', 'edit', contact.id]">info</a>
-          </td>
-          <td>
-              <a mat-raised-button color="primary" [routerLink]="['/contacts', 'edit', contact.id]">EDIT</a>
-          </td>
-          <td>
+              <a mat-raised-button [routerLink]="['/Contact', contact.id]" >INFO</a>
               <a mat-raised-button color="warn" [routerLink]="['/contacts', 'delete', contact.id]">DELETE</a>
+              <a mat-raised-button color="primary" [routerLink]="['/contacts', 'edit', contact.id]">EDIT</a>
           </td>
       </tr>
     </tbody>
