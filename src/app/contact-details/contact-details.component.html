@@ -1,15 +1,19 @@
 <div class="container" id="ContactDetails">
     <div class="row">
-
-        <img class="product-image" *ngIf="contact.profilePicUrl" [src]="contact.profilePicUrl">
-        <h1> {{ contact.name }} </h1>
-
-        <p> {{ contact.company }} </p>
-        <p> {{ contact.email }} </p>
-        <p> {{ contact.birthday }} </p>
-        <p> {{ contact.phoneNumberWork }} </p>
-        <p> {{ contact.phoneNumberHome }} </p>
-        <p> {{ contact.address }} </p>
-        
+        <div class="col"> 
+            <img class="product-image" *ngIf="contact.profilePicUrl" [src]="contact.profilePicUrl">
+            <h1> {{ contact.name }} </h1>
+        </div>   
+        <div class="col">
+            <p> {{ contact.company }} </p>
+            <p> {{ contact.email }} </p>
+            <p> {{ contact.phoneNumberWork }} </p>
+        </div>
+        <div class="col">
+            <p> {{ contact.birthday }} </p>
+            
+            <p> {{ contact.phoneNumberHome }} </p>
+            <p> {{ contact.address }} </p>
+        </div>
     </div>
 </div>
