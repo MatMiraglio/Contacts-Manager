@@ -5,15 +5,34 @@
             <h1> {{ contact.name }} </h1>
         </div>   
         <div class="col">
-            <p> {{ contact.company }} </p>
-            <p> {{ contact.email }} </p>
-            <p> {{ contact.phoneNumberWork }} </p>
+            <div *ngIf="contact.company" class="data-element">
+                <h5>Company:</h5>
+                <p> {{ contact.company }} </p>
+            </div>
+            <div *ngIf="contact.email" class="data-element">
+                <h5>Email:</h5>
+                <p> {{ contact.email }} </p>
+            </div>
+            <div *ngIf="contact.phoneNumberWork" class="data-element">
+                <h5>Phone Work:</h5>
+                <p> {{ contact.phoneNumberWork }} </p>
+            </div>
         </div>
         <div class="col">
+            <div *ngIf="contact.birthday" class="data-element">
+            <h5>Birthday:</h5>
             <p> {{ contact.birthday }} </p>
-            
-            <p> {{ contact.phoneNumberHome }} </p>
-            <p> {{ contact.address }} </p>
+            </div>
+
+            <div *ngIf="contact.address" class="data-element">
+                <h5>Address:</h5>
+                <p> {{ contact.address }} </p>
+            </div>
+
+            <div *ngIf="contact.phoneNumberHome" class="data-element">
+                <h5>Phone Home:</h5>
+                <p> {{ contact.phoneNumberHome }} </p>
+            </div>
         </div>
     </div>
     <div class="row">

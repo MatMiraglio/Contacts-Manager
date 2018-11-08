@@ -10,12 +10,15 @@
     </thead>
     <tbody>
       <tr *ngFor='let contact of ContactList'>
-          <td> <img class="product-image" *ngIf="contact.profilePicUrl" [src]="contact.profilePicUrl"> </td>
+          <td [ngSwitch]="contact.profilePicUrl"> 
+            <img class="product-image" *ngSwitchCase="undefined" src="..\assets\images\avatar_placeholder.png">
+            <img class="product-image" *ngSwitchDefault [src]="contact.profilePicUrl"> 
+          </td>
           <td> {{ contact.name }} </td>
           <td> {{ contact.company }} </td>
           <td>
               <a mat-raised-button [routerLink]="['/Contact', contact.id]" >INFO</a>
-              <a mat-raised-button color="warn" [routerLink]="['/contacts', 'delete', contact.id]">DELETE</a>
+              <button mat-raised-button color="warn" (click)="deleteContact(contact.id)">DELETE</button>
               <a mat-raised-button color="primary" [routerLink]="['/contacts', 'edit', contact.id]">EDIT</a>
           </td>
       </tr>

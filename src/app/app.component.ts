@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {MatToolbarModule} from '@angular/material/toolbar';
-
 
 @Component({
   selector: 'app-root',
@@ -10,3 +8,18 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 export class AppComponent {
   title = 'Contacts';
 }
+
+declare global {
+  interface Array<T> {
+      last(): T;
+  }
+}
+
+interface Array<T> {
+  last(): T;
+}
+
+Array.prototype.last = function (this) {
+  // code to remove "o"
+  return this[ this.length - 1];
+};

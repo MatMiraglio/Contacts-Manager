@@ -29,6 +29,10 @@ export class ContactListComponent implements OnInit {
     this.ContactSelected.emit(contact);
   }
 
+  deleteContact(id: number) {
+    this._contactService.deletContact(id);
+  }
+
   isSelected(contact: Contact): boolean {
     if (!contact || !this._currentContact) {
       return false;

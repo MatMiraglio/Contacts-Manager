@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { ContactService } from './contact.service';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,8 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
   providers: [
     MatDatepickerModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
