@@ -12,7 +12,7 @@ export class ContactService {
     {
       id: 1,
       name: 'John', company: 'Solstice',
-      profilePicUrl: 'https://via.placeholder.com/150/b0f7cc',
+      profilePicUrl: undefined,
       email: 'solstice@gmail.com',
       birthday: '20/12/1990',
       phoneNumberWork: '123123123',
@@ -23,7 +23,7 @@ export class ContactService {
       id: 2,
       name: 'Bob',
       company: 'Microsoft',
-      profilePicUrl: 'https://via.placeholder.com/150/b0f7cc',
+      profilePicUrl: undefined,
       email: 'solstice@gmail.com',
       birthday: '20/12/1990',
       phoneNumberWork: '',
