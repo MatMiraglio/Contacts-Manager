@@ -1,7 +1,8 @@
 <div class="container" >
     <div class="row mat-elevation-z8" id="ContactDetails">
-        <div class="col"> 
-            <img class="product-image" *ngIf="contact.profilePicUrl" [src]="contact.profilePicUrl">
+        <div class="col" [ngSwitch]="contact.profilePicUrl">
+            <img class="contact-image-details mat-elevation-z4" *ngSwitchCase="undefined" src="..\assets\images\avatar_placeholder.png">
+            <img class="contact-image-details mat-elevation-z4" *ngSwitchDefault [src]="contact.profilePicUrl">  
             <h1> {{ contact.name }} </h1>
         </div>   
         <div class="col">

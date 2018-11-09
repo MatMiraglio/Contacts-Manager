@@ -33,7 +33,7 @@ export class ContactService {
       id: 3,
       name: 'Mark',
       company: 'Google',
-      profilePicUrl: 'https://via.placeholder.com/150/b0f7cc',
+      profilePicUrl: undefined,
       email: 'solstice@gmail.com',
       birthday: '20/12/1990',
       phoneNumberWork: '',

@@ -8,6 +8,7 @@
     width: 66%;
     a, button{
       margin-right: 10px;
+
     }
   }
   
@@ -83,9 +84,25 @@
     }
   }
 
+
+.contact-image:hover{
+    opacity: 0.50;
+}
+
+.img-button{
+  border-radius: 50%;
+  border:none;
+  outline:none;
+
+  p{
+    font-size: 40px;
+    position: absolute;
+  }
+
   img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin: 0px;
+  }
 }

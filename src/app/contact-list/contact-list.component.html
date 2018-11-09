@@ -10,9 +10,12 @@
     </thead>
     <tbody>
       <tr *ngFor='let contact of ContactList'>
-          <td [ngSwitch]="contact.profilePicUrl"> 
-            <img class="product-image" *ngSwitchCase="undefined" src="..\assets\images\avatar_placeholder.png">
-            <img class="product-image" *ngSwitchDefault [src]="contact.profilePicUrl"> 
+          <td [ngSwitch]="contact.profilePicUrl">
+            <button class="img-button mat-elevation-z4" href="#">
+              <p>+</p> 
+              <img class="contact-image" *ngSwitchCase="undefined" src="..\assets\images\avatar_placeholder.png">
+              <img class="contact-image" *ngSwitchDefault [src]="contact.profilePicUrl"> 
+            </button>
           </td>
           <td> {{ contact.name }} </td>
           <td> {{ contact.company }} </td>
