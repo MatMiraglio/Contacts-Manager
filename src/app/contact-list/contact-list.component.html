@@ -21,7 +21,7 @@
           <td> {{ contact.company }} </td>
           <td>
               <a mat-raised-button [routerLink]="['/Contact', contact.id]" >INFO</a>
-              <button mat-raised-button color="warn" (click)="deleteContact(contact.id)">DELETE</button>
+              <app-delete-contact-button [contact]='contact'></app-delete-contact-button>
               <a mat-raised-button color="primary" [routerLink]="['/contacts', 'edit', contact.id]">EDIT</a>
           </td>
       </tr>

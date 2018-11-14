@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+  <p>Are you sure you want to delete <b>{{data.name}}</b> from <b>{{data.company}}</b>?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="Cancel()">Cancel</button>
+  <button mat-button color="warn" cdkFocusInitial (click)="Confirm()">Confirm</button>
+</div>
